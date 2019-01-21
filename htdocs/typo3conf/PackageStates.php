@@ -95,6 +95,12 @@ return [
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
+        'gridelements' => [
+            'packagePath' => 'typo3conf/ext/gridelements/',
+        ],
+        'ws_scss' => [
+            'packagePath' => 'typo3conf/ext/ws_scss/',
+        ],
     ],
     'version' => 5,
 ];
