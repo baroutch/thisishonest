@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "Template qui d\u00e9finit la structure g\u00e9n\u00e9rale du site",
+        "emConf": {
+            "category": "templates",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "ho_template",
+        "name": "Plugin du template du site",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "TABARY Olivier",
+                "email": "olivier.tabary@wanadoo.fr",
+                "name": "TABARY Olivier",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "HONEST"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-01-10 11:26",
+        "extension_builder_version": "9.10.0",
+        "be_user": " (1)"
+    }
+}

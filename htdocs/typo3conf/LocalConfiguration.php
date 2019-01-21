@@ -1,7 +1,7 @@
 <?php
 return [
     'BE' => [
-        'debug' => false,
+        'debug' => true,
         'explicitADmode' => 'explicitAllow',
         'installToolPassword' => '$argon2i$v=19$m=16384,t=16,p=2$Y1ZHS283TVVCdlJ4ZWt5RA$Kw83qrvPvT/flHlZi4mtPSlX9CP8UBcm3WxTiNSQcGc',
         'loginSecurityLevel' => 'normal',
@@ -60,12 +60,21 @@ return [
         ],
     ],
     'FE' => [
-        'debug' => false,
+        'debug' => true,
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
         ],
+    ],
+    'GFX' => [
+        'processor' => 'ImageMagick',
+        'processor_allowTemporaryMasksAsPng' => '',
+        'processor_colorspace' => 'RGB',
+        'processor_effects' => false,
+        'processor_enabled' => '1',
+        'processor_path' => '/usr/bin/',
+        'processor_path_lzw' => '/usr/bin/',
     ],
     'MAIL' => [
         'transport' => 'sendmail',
@@ -76,17 +85,18 @@ return [
         'transport_smtp_username' => '',
     ],
     'SYS' => [
-        'devIPmask' => '',
-        'displayErrors' => 0,
+        'devIPmask' => '*',
+        'displayErrors' => 1,
         'encryptionKey' => '5c85e63100fac64900e231f9d632f5a8800c533777d3c0633df836d8c4a8719cf9cec3df4f058e265e2d7773b4b5f896',
-        'exceptionalErrors' => 4096,
+        'exceptionalErrors' => 12290,
         'features' => [
             'unifiedPageTranslationHandling' => true,
         ],
         'sitename' => 'Socle TYPO3 v9',
-        'systemLogLevel' => 2,
+        'systemLogLevel' => 0,
         'systemMaintainers' => [
             1,
+            2,
         ],
     ],
 ];

@@ -1,0 +1,39 @@
+{
+    "modules": [],
+    "properties": {
+        "backendModules": [],
+        "description": "Plugin qui permet de g\u00e9rer les blocs de contenus du site",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 9.5.0-9.5.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "fr",
+            "state": "alpha",
+            "targetVersion": "9.5.0-9.5.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "ho_content",
+        "name": "Plugin Content",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "TABARY Olivier",
+                "email": "olivier.tabary@wanadoo.fr",
+                "name": "TABARY Olivier",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [],
+        "vendorName": "HONEST"
+    },
+    "wires": [],
+    "log": {
+        "last_modified": "2019-01-14 08:50",
+        "extension_builder_version": "9.10.0",
+        "be_user": " (1)"
+    }
+}

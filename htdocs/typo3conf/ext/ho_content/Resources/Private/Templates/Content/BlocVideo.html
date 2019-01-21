@@ -1,0 +1,10 @@
+<f:if condition="{height_type} == 2">
+    <f:then>
+        <article style="height:{video_height}px; background-image:url('{f:uri.image(src: '{vignette.uid}', treatIdAsReference: 1)}');" class="bloc_video">
+    </f:then>
+    <f:else>
+        <article style="height:100vh; background-image:url('{f:uri.image(src: '{vignette.uid}', treatIdAsReference: 1)}');" class="bloc_video">
+    </f:else>
+</f:if>
+    <div class="titre_bloc_video">{titre}</div>
+</article>

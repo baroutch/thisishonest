@@ -1,0 +1,6 @@
+plugin.tx_hotemplate_pi1.settings.dirIcone = uploads/ho_smilecontent/
+
+ho_template.resDir = typo3conf/ext/ho_template/Resources
+
+#cat=smile_template/baseUrl; type=text; label=base Url
+ho_template.baseUrl = thisishonest.lxc

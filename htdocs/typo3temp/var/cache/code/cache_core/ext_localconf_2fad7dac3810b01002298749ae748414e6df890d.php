@@ -1369,6 +1369,58 @@ $signalSlotDispatcher->connect(\TYPO3\CMS\Core\Utility\ExtensionManagementUtilit
 
 
 /**
+ * Extension: ho_content
+ * File: /var/www/html/htdocs/typo3conf/ext/ho_content/ext_localconf.php
+ */
+
+$_EXTKEY = 'ho_content';
+$_EXTCONF = $GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf'][$_EXTKEY] ?? null;
+
+
+defined('TYPO3_MODE') || die('Access denied.');
+
+call_user_func(
+    function()
+    {
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Honest.HoContent',
+            'Pi1',
+            array(
+                'Content' => 'blocVideo',
+
+            ),
+            // non-cacheable actions
+            array(
+                'Content' => 'blocVideo',
+
+            )
+        );
+
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        pi1 {
+                            iconIdentifier = extension-honest-content-blocvideo
+                            title = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi1
+                            description = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi1.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hocontent_pi1
+                            }
+                        }
+                    }
+                    show = *
+                }
+           }'
+        );
+    }
+);
+
+
+/**
  * Extension: ws_scss
  * File: /var/www/html/htdocs/typo3conf/ext/ws_scss/ext_localconf.php
  */

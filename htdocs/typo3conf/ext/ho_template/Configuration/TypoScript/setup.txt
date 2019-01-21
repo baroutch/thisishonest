@@ -1,0 +1,119 @@
+config{
+
+    baseURL = http://{$ho_template.baseUrl}/
+    no_cache = 0
+
+}
+
+# *****************************************************************************************
+
+page = PAGE
+page {
+
+    includeCSS {
+        fonts = {$ho_template.resDir}/Public/scss/fonts.css
+        bootstrap = {$ho_template.resDir}/Public/css/bootstrap.min.css
+        common = {$ho_template.resDir}/Public/scss/common.scss
+    }
+}
+
+# header
+page.5 = FLUIDTEMPLATE
+page.5 {
+
+    file = {$ho_template.resDir}/Private/Templates/Transverse/header.html
+
+    variables {
+        mainLogo = TEXT
+        mainLogo {
+            value = <img src="{$smile_template.resDir}/Public/img/logo-vendee.png" alt="Cartouche logo conseil Départemental de la Vendée" />
+            typolink {
+                parameter = 1
+                ATagParams = class="header__logo"
+            }
+        }
+
+        main-menu = HMENU
+        main-menu {
+            1 = TMENU
+            1 {
+                expAll = 1
+                wrap = <ul class="navigation__main">|</ul>
+
+                NO {
+                    wrapItemAndSub = <li>|</li>
+                    ATagParams = class="navigation__link"
+                }
+
+                ACT = 1
+                ACT {
+                    wrapItemAndSub = <li>|</li>
+                    ATagParams = class="navigation__link"
+                }
+
+                IFSUB = 1
+                IFSUB {
+                    wrapItemAndSub = <li>|</li>
+                    ATagParams = class="navigation__link"
+                }
+
+                ACTIFSUB = 1
+                ACTIFSUB {
+                    wrapItemAndSub = <li>|</li>
+                    ATagParams = class="navigation__link"
+                }
+            }
+        }
+    }
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+
+    variables{
+        home-center < styles.content.get
+        home-center.select.where = colPos = 1
+    }
+
+    file.stdWrap.cObject = CASE
+    file.stdWrap.cObject {
+
+        key.data = pagelayout
+
+        1 = TEXT
+        1.value = {$ho_template.resDir}/Private/Templates/home.html
+    }
+}
+
+plugin.tx_wsscss.variables {
+    primary-text-color = #da0c16
+    secondary-text-color = #fff
+    test-color = #000
+
+    nunitobold = 'nunitobold'
+}
+
+tt_content.gridelements_pi1.20.10.setup {
+    1 < lib.gridelements.defaultGridSetup
+    1.prepend =< lib.stdheader
+    1.cObject = FLUIDTEMPLATE
+    1.cObject.file = fileadmin/templates/gridelements/grid5050.html
+    2 < lib.gridelements.defaultGridSetup
+    2.prepend =< lib.stdheader
+    2.cObject = FLUIDTEMPLATE
+    2.cObject.file = fileadmin/templates/gridelements/grid333333.html
+    3 < lib.gridelements.defaultGridSetup
+    3.prepend =< lib.stdheader
+    3.cObject = FLUIDTEMPLATE
+    3.cObject.file = fileadmin/templates/gridelements/grid25252525.html
+    4 < lib.gridelements.defaultGridSetup
+    4.prepend =< lib.stdheader
+    4.cObject = FLUIDTEMPLATE
+    4.cObject.file = fileadmin/templates/gridelements/grid3366.html
+    5 < lib.gridelements.defaultGridSetup
+    5.prepend =< lib.stdheader
+    5.cObject = FLUIDTEMPLATE
+    5.cObject.file = fileadmin/templates/gridelements/grid6633.html
+}
+# ************************************************************************************
+

@@ -98,6 +98,12 @@ return [
         'gridelements' => [
             'packagePath' => 'typo3conf/ext/gridelements/',
         ],
+        'ho_content' => [
+            'packagePath' => 'typo3conf/ext/ho_content/',
+        ],
+        'ho_template' => [
+            'packagePath' => 'typo3conf/ext/ho_template/',
+        ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
