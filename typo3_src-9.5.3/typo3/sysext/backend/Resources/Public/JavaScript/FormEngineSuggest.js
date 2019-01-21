@@ -1,0 +1,13 @@
+/*
+ * This file is part of the TYPO3 CMS project.
+ *
+ * It is free software; you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License, either version 2
+ * of the License, or any later version.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE.txt file that was distributed with this source code.
+ *
+ * The TYPO3 project - inspiring people to share!
+ */
+define(["require","exports","jquery","TYPO3/CMS/Backend/FormEngine","TYPO3/CMS/Core/Contrib/jquery.autocomplete"],function(e,t,a,n){"use strict";return function(){function e(e){var t=this;a(function(){t.initialize(e)})}return e.prototype.initialize=function(e){var t=e.closest(".t3-form-suggest-container"),i=e.dataset.tablename,r=e.dataset.fieldname,o=e.dataset.field,s=parseInt(e.dataset.uid,10),d=parseInt(e.dataset.pid,10),l=e.dataset.datastructureidentifier,u=e.dataset.flexformsheetname,c=e.dataset.flexformfieldname,m=e.dataset.flexformcontainername,f=e.dataset.flexformcontainerfieldname,p=parseInt(e.dataset.minchars,10),g=TYPO3.settings.ajaxUrls.record_suggest,x={tableName:i,fieldName:r,uid:s,pid:d,dataStructureIdentifier:l,flexFormSheetName:u,flexFormFieldName:c,flexFormContainerName:m,flexFormContainerFieldName:f};a(e).autocomplete({serviceUrl:g,params:x,type:"POST",paramName:"value",dataType:"json",minChars:p,groupBy:"typeLabel",containerClass:"autocomplete-results",appendTo:t,forceFixPosition:!1,preserveInput:!0,showNoSuggestionNotice:!0,noSuggestionNotice:'<div class="autocomplete-info">No results</div>',minLength:p,preventBadQueries:!1,transformResult:function(e){return{suggestions:e.map(function(e){return{value:e.text,data:e}})}},formatResult:function(e){return a("<div>").append(a('<a class="autocomplete-suggestion-link" href="#">'+e.data.sprite+e.data.text+"</a></div>").attr({"data-label":e.data.label,"data-table":e.data.table,"data-uid":e.data.uid})).html()},onSearchComplete:function(){t.classList.add("open")},beforeRender:function(e){e.attr("style",""),t.classList.add("open")},onHide:function(){t.classList.remove("open")},onSelect:function(){var i,r;i=t.querySelector(".autocomplete-selected a"),r="",r="select"===e.dataset.fieldtype?i.dataset.uid:i.dataset.table+"_"+i.dataset.uid,n.setSelectOptionFromExternalSource(o,r,i.dataset.label,i.dataset.label),n.Validation.markFieldAsChanged(a(document.querySelector('input[name="'+o+'"]')))}})},e}()});
