@@ -11,4 +11,6 @@ return array(
     'Honest\\HoContent\\' => array($typo3InstallDir . 'typo3conf/ext/ho_content/Classes'),
     'PhpParser\\' => array($typo3InstallDir . 'typo3conf/ext/extension_builder/Resources/Private/PHP/PHP-Parser/lib/PhpParser'),
     'WapplerSystems\\WsScss\\' => array($typo3InstallDir . 'typo3conf/ext/ws_scss/Classes'),
+    'mehrwert\\Phpmyadmin\\' => array($typo3InstallDir . 'typo3conf/ext/phpmyadmin/Classes'),
+
 );

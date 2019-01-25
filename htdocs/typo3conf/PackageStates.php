@@ -104,6 +104,9 @@ return [
         'ho_template' => [
             'packagePath' => 'typo3conf/ext/ho_template/',
         ],
+        'phpmyadmin' => [
+            'packagePath' => 'typo3conf/ext/phpmyadmin/',
+        ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
