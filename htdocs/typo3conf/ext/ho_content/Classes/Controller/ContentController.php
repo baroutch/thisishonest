@@ -17,14 +17,13 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
         //print_r($tab);
 
-        $resourceFactory = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Resource\\ResourceFactory');
-        $fileReference = $resourceFactory->getFileReferenceObject($tab['data']['config']['lDEF']['vignette']['vDEF']);
-
-        $this->view->assign('vignette', $fileReference->getProperties());
+        $this->view->assign('vignette', $tab['data']['config']['lDEF']['vignette']['vDEF']);
+        $this->view->assign('video', $tab['data']['config']['lDEF']['video']['vDEF']);
 
         $this->view->assign('height_type', $tab['data']['config']['lDEF']['height_type']['vDEF']);
         $this->view->assign('video_height', $tab['data']['config']['lDEF']['video_height']['vDEF']);
         $this->view->assign('titre', $tab['data']['config']['lDEF']['titre']['vDEF']);
+        $this->view->assign('sstitre', $tab['data']['config']['lDEF']['sstitre']['vDEF']);
 
         return;
 
