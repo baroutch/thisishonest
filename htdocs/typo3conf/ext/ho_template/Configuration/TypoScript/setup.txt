@@ -39,7 +39,7 @@ page.5 {
     variables {
         mainLogo = TEXT
         mainLogo {
-            value = <img src="{$smile_template.resDir}/Public/img/logo-vendee.png" alt="Cartouche logo conseil Départemental de la Vendée" />
+            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
             typolink {
                 parameter = 1
                 ATagParams = class="header__logo"
@@ -104,6 +104,7 @@ plugin.tx_wsscss.variables {
     test-color = #000
 
     nunitobold = 'nunitobold'
+    nunitoregular = 'nunitoregular'
 }
 
 tt_content.gridelements_pi1.20.10.setup {

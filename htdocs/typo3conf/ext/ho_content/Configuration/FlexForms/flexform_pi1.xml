@@ -19,71 +19,40 @@
                             </config>
                         </TCEforms>
                     </titre>
+                    <sstitre>
+                        <TCEforms>
+                            <label>Sous Titre de la vidéo</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </sstitre>
                     <vignette>
                         <TCEforms>
-                            <label>LLL:EXT:bwrk_slider/Resources/Private/Language/locallang_db.xlf:imageslider.flex.general.sliderImages</label>
+                            <label>Vignette</label>
                             <config>
-                                <type>inline</type>
-                                <maxitems>99</maxitems>
-                                <foreign_table>sys_file_reference</foreign_table>
-                                <!--<foreign_field>uid_foreign</foreign_field>-->
-                                <foreign_table_field>tablenames</foreign_table_field>
-                                <foreign_label>uid_local</foreign_label>
-                                <foreign_sortby>sorting_foreign</foreign_sortby>
-                                <foreign_selector>uid_local</foreign_selector>
-                                <foreign_selector_fieldTcaOverride type="array">
-                                    <config>
-                                        <appearance>
-                                            <elementBrowserType>file</elementBrowserType>
-                                            <elementBrowserAllowed>jpg,png,jpeg</elementBrowserAllowed>
-                                        </appearance>
-                                    </config>
-                                </foreign_selector_fieldTcaOverride>
-                                <foreign_match_fields type="array">
-                                    <fieldname>image</fieldname>
-                                </foreign_match_fields>
-                                <appearance type="array">
-                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
-                                    <headerThumbnail>
-                                        <field>uid_local</field>
-                                        <height>64</height>
-                                        <width>64</width>
-                                    </headerThumbnail>
-                                </appearance>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>jpg,png,gif</allowed>
+                                <uploadfolder>uploads/tx_hocontent</uploadfolder>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                                <selectedListStyle>Width:180px</selectedListStyle>
                             </config>
                         </TCEforms>
                     </vignette>
                     <video>
                         <TCEforms>
-                            <label>LLL:EXT:bwrk_slider/Resources/Private/Language/locallang_db.xlf:imageslider.flex.general.sliderImages</label>
+                            <label>Vidéo</label>
                             <config>
-                                <type>inline</type>
-                                <maxitems>99</maxitems>
-                                <foreign_table>sys_file_reference</foreign_table>
-                                <!--<foreign_field>uid_foreign</foreign_field>-->
-                                <foreign_table_field>tablenames</foreign_table_field>
-                                <foreign_label>uid_local</foreign_label>
-                                <foreign_sortby>sorting_foreign</foreign_sortby>
-                                <foreign_selector>uid_local</foreign_selector>
-                                <foreign_selector_fieldTcaOverride type="array">
-                                    <config>
-                                        <appearance>
-                                            <elementBrowserType>file</elementBrowserType>
-                                            <elementBrowserAllowed>mp4</elementBrowserAllowed>
-                                        </appearance>
-                                    </config>
-                                </foreign_selector_fieldTcaOverride>
-                                <foreign_match_fields type="array">
-                                    <fieldname>image</fieldname>
-                                </foreign_match_fields>
-                                <appearance type="array">
-                                    <newRecordLinkAddTitle>1</newRecordLinkAddTitle>
-                                    <headerThumbnail>
-                                        <field>uid_local</field>
-                                        <height>64</height>
-                                        <width>64</width>
-                                    </headerThumbnail>
-                                </appearance>
+                                <type>group</type>
+                                <internal_type>file</internal_type>
+                                <allowed>mp4</allowed>
+                                <uploadfolder>uploads/tx_hocontent</uploadfolder>
+                                <maxitems>1</maxitems>
+                                <size>1</size>
+                                <selectedListStyle>Width:180px</selectedListStyle>
                             </config>
                         </TCEforms>
                     </video>

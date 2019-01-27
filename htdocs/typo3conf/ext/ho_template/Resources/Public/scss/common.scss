@@ -33,9 +33,9 @@ header{
 
   #logo{
     position:absolute;
-    width:300px;
+    width:200px;
     height:150px;
-    left:calc(50vw - 150px);
+    left:calc(50vw - 100px);
     padding:50px 0px;
     text-align:center;
 
@@ -68,17 +68,35 @@ article.bloc_video{
   background-position:center;
   width:100%;
 
-  .titre_bloc_video{
-    height:50px;
-    line-height:50px;
+  .bloc-video-content{
+    height:100px;
     position:absolute;
     top:calc(50% - 50px);
-    text-align:center;
-    width:100%;
-    color:$secondary-text-color;
-    text-decoration:none;
-    font-family:$nunitobold;
-    text-transform:uppercase;
-    font-size:20px;
+
+
+
+    .titre_bloc_video{
+      line-height:auto;
+      text-align:center;
+      width:100%;
+      color:$secondary-text-color;
+      text-decoration:none;
+      font-family:$nunitobold;
+      text-transform:uppercase;
+      font-size:30px;
+    }
+
+    .sstitre_bloc_video{
+      line-height:auto;
+      text-align:center;
+      width:100%;
+      color:$secondary-text-color;
+      text-decoration:none;
+      font-family:$nunitoregular;
+      text-transform:uppercase;
+      font-size:16px;
+    }
+
   }
+
 }
