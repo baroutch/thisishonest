@@ -1,10 +1,10 @@
 @import "reset";
-@import "fonts";
 
 header{
   height:150px;
   position:absolute;
   width:100%;
+  z-index:100;
 
   nav{
     position:absolute;
@@ -49,13 +49,24 @@ header{
   }
 }
 
-section{
+*, :after, :before {
+  box-sizing: border-box;
+}
 
+section.viewport{
+
+  #scrollcontainer {
+
+    div{
+      width:100%;
+    }
+  }
 }
 
 article.bloc_video{
   background-size:cover;
   background-position:center;
+  width:100%;
 
   .titre_bloc_video{
     height:50px;
