@@ -33,6 +33,7 @@ return [
             'extension_builder' => 'a:3:{s:9:"backupDir";s:35:"uploads/tx_extensionbuilder/backups";s:15:"backupExtension";s:1:"1";s:15:"enableRoundtrip";s:1:"1";}',
             'extensionmanager' => 'a:2:{s:21:"automaticInstallation";s:1:"1";s:11:"offlineMode";s:1:"0";}',
             'gridelements' => 'a:3:{s:20:"additionalStylesheet";s:0:"";s:19:"nestingInListModule";s:1:"0";s:26:"overlayShortcutTranslation";s:1:"0";}',
+            'phpmyadmin' => 'a:4:{s:12:"hideOtherDBs";s:1:"1";s:9:"uploadDir";s:21:"uploads/tx_phpmyadmin";s:10:"allowedIps";s:0:"";s:12:"useDevIpMask";s:1:"0";}',
         ],
     ],
     'EXTENSIONS' => [
@@ -57,6 +58,12 @@ return [
             'additionalStylesheet' => '',
             'nestingInListModule' => '0',
             'overlayShortcutTranslation' => '0',
+        ],
+        'phpmyadmin' => [
+            'allowedIps' => '',
+            'hideOtherDBs' => '1',
+            'uploadDir' => 'uploads/tx_phpmyadmin',
+            'useDevIpMask' => '0',
         ],
     ],
     'FE' => [

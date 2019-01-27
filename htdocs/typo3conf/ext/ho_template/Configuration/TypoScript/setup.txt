@@ -11,10 +11,23 @@ page = PAGE
 page {
 
     includeCSS {
-        fonts = {$ho_template.resDir}/Public/scss/fonts.css
+        fonts = {$ho_template.resDir}/Public/css/fonts.css
         bootstrap = {$ho_template.resDir}/Public/css/bootstrap.min.css
         common = {$ho_template.resDir}/Public/scss/common.scss
     }
+
+    includeJS {
+        jquery = {$ho_template.resDir}/Public/js/jquery-3.3.1.min.js
+        TweenLite = {$ho_template.resDir}/Public/js/TweenLite.min.js
+        TweenMax = {$ho_template.resDir}/Public/js/TweenMax.min.js
+        gsap = {$ho_template.resDir}/Public/js/jquery.gsap.min.js
+        ScrollToPlugin = {$ho_template.resDir}/Public/js/ScrollToPlugin.min.js
+    }
+
+    includeJSFooter{
+        common = {$ho_template.resDir}/Public/js/common.js
+    }
+
 }
 
 # header
