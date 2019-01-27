@@ -11,7 +11,7 @@ page = PAGE
 page {
 
     includeCSS {
-        fonts = {$ho_template.resDir}/Public/scss/fonts.css
+        fonts = {$ho_template.resDir}/Public/css/fonts.css
         bootstrap = {$ho_template.resDir}/Public/css/bootstrap.min.css
         common = {$ho_template.resDir}/Public/scss/common.scss
     }
