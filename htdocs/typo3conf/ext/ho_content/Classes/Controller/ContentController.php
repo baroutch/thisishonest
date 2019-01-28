@@ -15,6 +15,10 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $piFlexForm = $this->contentObj->data['pi_flexform'];
         $tab = \TYPO3\CMS\Core\Utility\GeneralUtility::xml2array($piFlexForm);
 
+        //print_r($this->contentObj->data['uid']);
+
+        $this->view->assign('uid', $this->contentObj->data['uid']);
+
         //print_r($tab);
 
         $this->view->assign('vignette', $tab['data']['config']['lDEF']['vignette']['vDEF']);

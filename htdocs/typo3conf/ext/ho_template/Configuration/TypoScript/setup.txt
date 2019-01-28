@@ -13,6 +13,7 @@ page {
     includeCSS {
         fonts = {$ho_template.resDir}/Public/css/fonts.css
         bootstrap = {$ho_template.resDir}/Public/css/bootstrap.min.css
+        font-awesome = {$ho_template.resDir}/Public/font-awesome/css/all.css
         common = {$ho_template.resDir}/Public/scss/common.scss
     }
 
@@ -105,6 +106,8 @@ plugin.tx_wsscss.variables {
 
     nunitobold = 'nunitobold'
     nunitoregular = 'nunitoregular'
+
+    fa-font-path = '../webfonts';
 }
 
 tt_content.gridelements_pi1.20.10.setup {
