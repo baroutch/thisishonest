@@ -40,7 +40,8 @@ header {
     header nav ul li {
       display: inline-block;
       padding: 0px 30px;
-      line-height: 50px; }
+      line-height: 50px;
+      font-size: 18px; }
       header nav ul li a {
         color: #fff;
         text-decoration: none;
@@ -63,17 +64,20 @@ header {
 *, :after, :before {
   box-sizing: border-box; }
 
-section.viewport #scrollcontainer div {
+section.viewport #scrollcontainer > div {
   width: 100%; }
 
 article.bloc_video {
+  position: relative;
   background-size: cover;
   background-position: center;
   width: 100%; }
   article.bloc_video .bloc-video-content {
     height: 100px;
     position: absolute;
-    top: calc(50% - 50px); }
+    top: calc(50% - 50px);
+    width: 100%;
+    cursor: pointer; }
     article.bloc_video .bloc-video-content .titre_bloc_video {
       line-height: auto;
       text-align: center;
@@ -92,3 +96,48 @@ article.bloc_video {
       font-family: 'nunitoregular';
       text-transform: uppercase;
       font-size: 16px; }
+  article.bloc_video .popin-video {
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    z-index: -10; }
+    article.bloc_video .popin-video .popin-video-content {
+      position: relative;
+      height: 100vh;
+      background: #000;
+      text-align: center; }
+      article.bloc_video .popin-video .popin-video-content video {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto; }
+      article.bloc_video .popin-video .popin-video-content .video-controls {
+        position: absolute;
+        height: 50px;
+        width: 50%;
+        bottom: 0px;
+        right: 0px;
+        z-index: 10;
+        text-align: right;
+        line-height: 20px;
+        padding-right: 50px; }
+      article.bloc_video .popin-video .popin-video-content .video-controls button {
+        background: none;
+        border: 0px;
+        color: #bbb;
+        display: inline-block;
+        line-height: 50px; }
+      article.bloc_video .popin-video .popin-video-content .video-controls button:focus {
+        outline: 0; }
+      article.bloc_video .popin-video .popin-video-content .video-controls progress {
+        display: inline-block;
+        height: 3px;
+        line-height: 50px;
+        width: 250px;
+        margin-bottom: 5px; }
+      article.bloc_video .popin-video .popin-video-content .video-controls progress::-webkit-progress-value {
+        background-color: #ddd; }

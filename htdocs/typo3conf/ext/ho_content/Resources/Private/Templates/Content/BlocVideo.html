@@ -10,7 +10,19 @@
         <div class="titre_bloc_video">{titre}</div>
         <div class="sstitre_bloc_video">{sstitre}</div>
     </div>
-    <div class="popin-video">
-        Test Popin video
+    <div class="popin-video" id="bloc-video-{uid}">
+        <div class="popin-video-content">
+            <!-- Video -->
+            <video class="media-video">
+                <source src="./uploads/tx_hocontent/{video}" type="video/mp4">
+            </video>
+            <!-- Video Controls -->
+            <div class="video-controls">
+                <button class="play fa fa-play" title="play"></button>
+                <progress class='progress-bar' min='0' max='100' value='0'>0% played</progress>
+                <button class="mute fa fa-volume-mute" title="mute"></button>
+            </div>
+        </div>
     </div>
 </article>
+
