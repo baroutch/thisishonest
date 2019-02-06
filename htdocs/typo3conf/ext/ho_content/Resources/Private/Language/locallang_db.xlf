@@ -9,6 +9,12 @@
             <trans-unit id="tx_ho_content_domain_model_pi1.description">
                 <source>Plugin qui gère l'affichage des blocs vidéo de la home</source>
             </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi2">
+                <source>Bloc image</source>
+            </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi2.description">
+                <source>Plugin qui gère l'affichage des blocs image de la home</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

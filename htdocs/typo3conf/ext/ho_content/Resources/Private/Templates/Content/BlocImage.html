@@ -1,0 +1,14 @@
+<f:if condition="{height_type} == 2">
+    <f:then>
+        <article style="height:{video_height}px; background-image:url('./uploads/tx_hocontent/{image}');" class="bloc_video">
+    </f:then>
+    <f:else>
+        <article style="height:100vh; background-image:url('./uploads/tx_hocontent/{image}');" class="bloc_video">
+    </f:else>
+</f:if>
+    <div class="bloc-video-content">
+        <div class="titre_bloc_video">{titre}</div>
+        <div class="sstitre_bloc_video">{sstitre}</div>
+    </div>
+</article>
+

@@ -23,11 +23,27 @@ class ContentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 
         $this->view->assign('vignette', $tab['data']['config']['lDEF']['vignette']['vDEF']);
         $this->view->assign('video', $tab['data']['config']['lDEF']['video']['vDEF']);
-
         $this->view->assign('height_type', $tab['data']['config']['lDEF']['height_type']['vDEF']);
         $this->view->assign('video_height', $tab['data']['config']['lDEF']['video_height']['vDEF']);
         $this->view->assign('titre', $tab['data']['config']['lDEF']['titre']['vDEF']);
         $this->view->assign('sstitre', $tab['data']['config']['lDEF']['sstitre']['vDEF']);
+
+        return;
+
+    }
+
+    public function blocImageAction(){
+
+        // On récupère le flexform
+        $this->contentObj = $this->configurationManager->getContentObject();
+        $piFlexForm = $this->contentObj->data['pi_flexform'];
+        $tab = \TYPO3\CMS\Core\Utility\GeneralUtility::xml2array($piFlexForm);
+
+        $this->view->assign('titre', $tab['data']['config']['lDEF']['titre']['vDEF']);
+        $this->view->assign('sstitre', $tab['data']['config']['lDEF']['sstitre']['vDEF']);
+        $this->view->assign('image', $tab['data']['config']['lDEF']['image']['vDEF']);
+        $this->view->assign('height_type', $tab['data']['config']['lDEF']['height_type']['vDEF']);
+        $this->view->assign('video_height', $tab['data']['config']['lDEF']['video_height']['vDEF']);
 
         return;
 
