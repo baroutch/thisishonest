@@ -1397,6 +1397,20 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Honest.HoContent',
+            'Pi2',
+            array(
+                'Content' => 'blocImage',
+
+            ),
+            // non-cacheable actions
+            array(
+                'Content' => 'blocImage',
+
+            )
+        );
+
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             'mod {
@@ -1409,6 +1423,26 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = hocontent_pi1
+                            }
+                        }
+                    }
+                    show = *
+                }
+           }'
+        );
+
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        pi2 {
+                            iconIdentifier = extension-honest-content-blocimage
+                            title = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi2
+                            description = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi2.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hocontent_pi2
                             }
                         }
                     }
