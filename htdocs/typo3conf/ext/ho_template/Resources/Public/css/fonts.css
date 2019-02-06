@@ -1,80 +1,15 @@
 @font-face {
-  font-family: 'nunitobold';
-  src: url('../fonts/nunito-bold-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-bold-webfont.woff') format('woff');
+  font-family: 'montserratbold';
+  src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+  url('../fonts/montserrat-bold-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
 }
 
-
-
-
 @font-face {
-  font-family: 'nunitosemibold_italic';
-  src: url('../fonts/nunito-semibolditalic-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-semibolditalic-webfont.woff') format('woff');
+  font-family: 'montserratregular';
+  src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+  url('../fonts/montserrat-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'nunitosemibold';
-  src: url('../fonts/nunito-semibold-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-semibold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'nunitoitalic';
-  src: url('../fonts/nunito-italic-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'nunitoregular';
-  src: url('../fonts/nunito-regular-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'nunitolight_italic';
-  src: url('../fonts/nunito-lightitalic-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-lightitalic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-}
-
-
-
-
-@font-face {
-  font-family: 'nunitolight';
-  src: url('../fonts/nunito-light-webfont.woff2') format('woff2'),
-  url('../fonts/nunito-light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
 }

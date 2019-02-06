@@ -6,7 +6,7 @@ return [
         'installToolPassword' => '$argon2i$v=19$m=16384,t=16,p=2$Y1ZHS283TVVCdlJ4ZWt5RA$Kw83qrvPvT/flHlZi4mtPSlX9CP8UBcm3WxTiNSQcGc',
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
             'options' => [],
         ],
     ],
@@ -70,7 +70,7 @@ return [
         'debug' => true,
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
             'options' => [],
         ],
     ],

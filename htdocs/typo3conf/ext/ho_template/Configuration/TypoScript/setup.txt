@@ -104,8 +104,8 @@ plugin.tx_wsscss.variables {
     secondary-text-color = #fff
     test-color = #000
 
-    nunitobold = 'nunitobold'
-    nunitoregular = 'nunitoregular'
+    nunitobold = 'montserratbold'
+    nunitoregular = 'montserratregular'
 
     fa-font-path = '../webfonts';
 }
