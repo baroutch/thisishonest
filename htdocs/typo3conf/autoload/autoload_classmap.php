@@ -318,4 +318,7 @@ return array(
     'PhpParser\\Unserializer\\XML' => $typo3InstallDir . 'typo3conf/ext/extension_builder/Resources/Private/PHP/PHP-Parser/lib/PhpParser/Unserializer/XML.php',
     'WapplerSystems\\WsScss\\Formatter\\Autoprefixer' => $typo3InstallDir . 'typo3conf/ext/ws_scss/Classes/Formatter/Autoprefixer.php',
     'WapplerSystems\\WsScss\\Hooks\\RenderPreProcessorHook' => $typo3InstallDir . 'typo3conf/ext/ws_scss/Classes/Hooks/RenderPreProcessorHook.php',
+    'mehrwert\\Phpmyadmin\\Backend\\PmaModule' => $typo3InstallDir . 'typo3conf/ext/phpmyadmin/Classes/Backend/PmaModule.php',
+    'mehrwert\\Phpmyadmin\\Controller\\PhpmyadminController' => $typo3InstallDir . 'typo3conf/ext/phpmyadmin/Classes/Controller/PhpmyadminController.php',
+    'mehrwert\\Phpmyadmin\\Hooks\\BeUserAuthLogOffHook' => $typo3InstallDir . 'typo3conf/ext/phpmyadmin/Classes/Hooks/BeUserAuthLogOffHook.php',
 );

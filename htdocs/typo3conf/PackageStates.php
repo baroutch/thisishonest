@@ -101,6 +101,9 @@ return [
         'ho_content' => [
             'packagePath' => 'typo3conf/ext/ho_content/',
         ],
+        'ho_social_media' => [
+            'packagePath' => 'typo3conf/ext/ho_social_media/',
+        ],
         'ho_template' => [
             'packagePath' => 'typo3conf/ext/ho_template/',
         ],
