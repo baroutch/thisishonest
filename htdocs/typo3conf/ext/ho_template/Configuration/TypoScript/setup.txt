@@ -19,6 +19,7 @@ page {
 
     includeJS {
         jquery = {$ho_template.resDir}/Public/js/jquery-3.3.1.min.js
+        History = {$ho_template.resDir}/Public/js/history.js
         TweenLite = {$ho_template.resDir}/Public/js/TweenLite.min.js
         TweenMax = {$ho_template.resDir}/Public/js/TweenMax.min.js
         gsap = {$ho_template.resDir}/Public/js/jquery.gsap.min.js
@@ -40,7 +41,7 @@ page.5 {
     variables {
         mainLogo = TEXT
         mainLogo {
-            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
+            value = <img src="{$ho_template.resDir}/Public/img/logo_blanc.png" alt="Logo This Is Honest" />
             typolink {
                 parameter = 1
                 ATagParams = class="header__logo"
@@ -102,6 +103,7 @@ page.10 {
 plugin.tx_wsscss.variables {
     primary-text-color = #da0c16
     secondary-text-color = #fff
+    secondary-text-color-hover = #ddd
     test-color = #000
 
     nunitobold = 'nunitobold'

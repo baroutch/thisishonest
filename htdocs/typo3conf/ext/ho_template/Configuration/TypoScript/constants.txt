@@ -1,4 +1,4 @@
-plugin.tx_hotemplate_pi1.settings.dirIcone = uploads/ho_smilecontent/
+plugin.tx_hotemplate_pi1.settings.dirIcone = uploads/ho_content/
 
 ho_template.resDir = typo3conf/ext/ho_template/Resources
 

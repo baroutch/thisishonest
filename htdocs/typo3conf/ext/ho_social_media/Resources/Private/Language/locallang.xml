@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <type>default</type>
+        <description>Language labels for database tables/fields belonging to extension 'jh_opengraphprotocol'</description>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+            <!-- TCA -->
+            <label index="pages.tab_title">Open Graph protocol</label>
+            <label index="pages.tx_hosocialmedia_ogtitle">Title</label>
+            <label index="pages.tx_hosocialmedia_ogtype">Type</label>
+            <label index="pages.tx_hosocialmedia_ogimage">Image</label>
+            <label index="pages.tx_hosocialmedia_ogimage.mergeIfNotBlank">Image (The image(s) of the default language will be used if this field is left empty in the translation.)</label>
+            <label index="pages.tx_hosocialmedia_ogdescription">Description</label>
+        </languageKey>
+        <languageKey index="de" type="array">
+            <!-- TCA -->
+            <label index="pages.tab_title">Open Graph protocol</label>
+            <label index="pages.tx_hosocialmedia_ogtitle">Titel</label>
+            <label index="pages.tx_hosocialmedia_ogtype">Typ</label>
+            <label index="pages.tx_hosocialmedia_ogimage">Bild</label>
+            <label index="pages.tx_hosocialmedia_ogimage.mergeIfNotBlank">Bild (Das Bild/die Bilder der Standardsprache wird/werden verwendet, wenn dieses Feld in der Übersetzung leer ist.)</label>
+            <label index="pages.tx_hosocialmedia_ogdescription">Beschreibung</label>
+        </languageKey>
+    </data>
+</T3locallang>

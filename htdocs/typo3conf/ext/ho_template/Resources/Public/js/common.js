@@ -96,3 +96,73 @@ $( document ).ready(function() {
     });
 
 });
+
+/*|===================================|*/
+/*|                                   |*/
+/*|   GESTION DES CHARGEMENTS EN JS   |*/
+/*|                                   |*/
+/*|===================================|*/
+
+console.debug('Class history.js');
+var History = window.History;
+var rootUrl = History.getRootUrl();
+var stateChangeVerrou = false;
+var JC = {
+
+    init: function(){
+        console.debug('Initialisation ajax');
+        JC.initLink();
+        JC.stateChange();
+    },
+
+    initLink: function(){
+
+        console.debug('Fonction initLink');
+
+        $('body').find('a').click(function(event){
+
+            stateChangeVerrou = true;
+            var
+                url = $(this).attr('href'),
+                title = $(this).attr('title')||null;
+
+            if($(this).attr('target') == '_blank') return true;
+
+            if ( event.which == 2 || event.metaKey ) { return true; }
+            History.pushState(null,title,url);
+            event.preventDefault();
+            return false;
+        });
+    },
+
+    loadUrl: function(url){
+        console.debug('loadUrl');
+        //JC.loadingStart();
+        $.ajax({
+            url: url,
+            cache: true,
+            success: function(response){
+                JC.$contentToLoad = $(response).find('#scrollcontainer');
+                console.debug($(response).find('#scrollcontainer'));
+                JC.removePage();
+                JC.loadingStop();
+            }
+        });/**/
+    },
+
+    stateChange: function(){
+        $(window).bind('statechange',function(){
+            if(stateChangeVerrou){
+                var State = History.getState();
+                JC.loadUrl( State.url);
+            }
+        });
+    },
+}
+
+
+$(document).ready(function() {
+
+    $(document).ready(JC.init);
+
+});
