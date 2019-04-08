@@ -1,32 +1,36 @@
 @import "reset";
 
 header{
-  height:150px;
+  height:100px;
   position:absolute;
   width:100%;
   z-index:100;
 
   nav{
     position:absolute;
-    left:0px;
-    top:0px;
+    left:50px;
+    top:35px;
     height:50px;
-    padding:50px;
 
     ul{
 
 
       li{
         display:inline-block;
-        padding:0px 30px;
+        padding:0px 60px 0px 0px;
         line-height:50px;
         font-size:18px;
 
         a{
           color:$secondary-text-color;
           text-decoration:none;
-          font-family:$nunitobold;
+          font-family:$nunitoregular;
           text-transform:uppercase;
+        }
+
+        a:hover{
+          color:$secondary-text-color-hover;
+          text-decoration:none;
         }
       }
     }
@@ -35,10 +39,9 @@ header{
   #logo{
     position:absolute;
     width:200px;
-    height:150px;
     left:calc(50vw - 100px);
-    padding:50px 0px;
     text-align:center;
+    margin-top:20px;
 
     a{
       color:$primary-text-color;
@@ -78,7 +81,7 @@ article.bloc_video{
     cursor:pointer;
 
     .titre_bloc_video{
-      line-height:auto;
+      line-height:50px;
       text-align:center;
       width:100%;
       color:$secondary-text-color;
