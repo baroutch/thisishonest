@@ -70,7 +70,7 @@ return [
         'debug' => true,
         'loginSecurityLevel' => 'normal',
         'passwordHashing' => [
-            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\BcryptPasswordHash',
+            'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
         ],
     ],
@@ -87,7 +87,7 @@ return [
         'transport' => 'sendmail',
         'transport_sendmail_command' => '/usr/sbin/sendmail -t -i ',
         'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
+        'transport_smtp_password' => 'user_typo3_v9_socle',
         'transport_smtp_server' => '',
         'transport_smtp_username' => '',
     ],
