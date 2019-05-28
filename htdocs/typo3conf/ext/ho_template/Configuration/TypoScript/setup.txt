@@ -19,7 +19,7 @@ page {
 
     includeJS {
         jquery = {$ho_template.resDir}/Public/js/jquery-3.3.1.min.js
-        History = {$ho_template.resDir}/Public/js/history.js
+        # History = {$ho_template.resDir}/Public/js/history.js
         TweenLite = {$ho_template.resDir}/Public/js/TweenLite.min.js
         TweenMax = {$ho_template.resDir}/Public/js/TweenMax.min.js
         gsap = {$ho_template.resDir}/Public/js/jquery.gsap.min.js
@@ -111,6 +111,8 @@ plugin.tx_wsscss.variables {
 
     fa-font-path = '../webfonts';
 }
+
+tt_content.stdWrap.innerWrap >
 
 tt_content.gridelements_pi1.20.10.setup {
     1 < lib.gridelements.defaultGridSetup

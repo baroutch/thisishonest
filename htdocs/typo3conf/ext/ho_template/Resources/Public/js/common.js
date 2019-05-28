@@ -1,28 +1,88 @@
-$(function(){
+var html = document.documentElement;
+var body = document.body;
+var bloc_video_tableau = new Array();
 
-    var $window = $(window);		//Window object
+var scroller = {
+    target: document.querySelector("#scroll-container"),
+    ease: 0.05, // <= scroll speed
+    endY: 0,
+    y: 0,
+    resizeRequest: 1,
+    scrollRequest: 0,
+};
 
-    var scrollTime = 1.2;			//Scroll time
-    var scrollDistance = 500;		//Distance. Use smaller value for shorter scroll and greater value for longer scroll
+var requestId = null;
 
-    $window.on("mousewheel DOMMouseScroll", function(event){
+TweenLite.set(scroller.target, {
+    rotation: 0.01,
+    force3D: true
+});
 
-        event.preventDefault();
+window.addEventListener("load", onLoad);
 
-        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
-        var scrollTop = $window.scrollTop();
-        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+function onLoad() {
+    updateScroller();
+    window.focus();
+    window.addEventListener("resize", onResize);
+    document.addEventListener("scroll", onScroll);
 
-        TweenMax.to($window, scrollTime, {
-            scrollTo : { y: finalScroll, autoKill:true },
-            ease: Power1.easeOut,	//For more easing functions see https://api.greensock.com/js/com/greensock/easing/package-detail.html
-            autoKill: true,
-            overwrite: 5
-        });
-
+    //On charge les coordonnées des différents blocs vidéos
+    $(".bloc_video").each(function () {
+        bloc_video_tableau.push(this.offsetTop);
     });
 
-});
+    console.debug(bloc_video_tableau);
+}
+
+function updateScroller() {
+
+    var resized = scroller.resizeRequest > 0;
+
+    if (resized) {
+        var height = scroller.target.clientHeight;
+        body.style.height = height + "px";
+        scroller.resizeRequest = 0;
+    }
+
+    var scrollY = window.pageYOffset || html.scrollTop || body.scrollTop || 0;
+
+    for(var i= 0; i < bloc_video_tableau.length; i++)
+    {
+        if(scrollY < (bloc_video_tableau[i] + 200) && scrollY > (bloc_video_tableau[i] - 200)){
+            scrollY = bloc_video_tableau[i];
+        }
+    }
+
+    console.debug("scrollY : " + scrollY);
+
+    scroller.endY = scrollY;
+    scroller.y += (scrollY - scroller.y) * scroller.ease;
+
+    if (Math.abs(scrollY - scroller.y) < 0.05 || resized) {
+        scroller.y = scrollY;
+        scroller.scrollRequest = 0;
+    }
+
+    TweenLite.set(scroller.target, {
+        y: -scroller.y
+    });
+
+    requestId = scroller.scrollRequest > 0 ? requestAnimationFrame(updateScroller) : null;
+}
+
+function onScroll() {
+    scroller.scrollRequest++;
+    if (!requestId) {
+        requestId = requestAnimationFrame(updateScroller);
+    }
+}
+
+function onResize() {
+    scroller.resizeRequest++;
+    if (!requestId) {
+        requestId = requestAnimationFrame(updateScroller);
+    }
+}
 
 $( document ).ready(function() {
 
@@ -103,6 +163,7 @@ $( document ).ready(function() {
 /*|                                   |*/
 /*|===================================|*/
 
+/*
 console.debug('Class history.js');
 var History = window.History;
 var rootUrl = History.getRootUrl();
@@ -147,7 +208,7 @@ var JC = {
                 JC.removePage();
                 JC.loadingStop();
             }
-        });/**/
+        });
     },
 
     stateChange: function(){
@@ -161,8 +222,12 @@ var JC = {
 }
 
 
+
+
 $(document).ready(function() {
 
     $(document).ready(JC.init);
 
 });
+
+*/
