@@ -92,8 +92,6 @@ $( document ).ready(function() {
 
         var playing_video = $(".popin-video", this)[0];
 
-        console.debug(playing_video);
-
         $(".popin-video", this).css('z-index', 10);
         TweenLite.to(playing_video , 1 , {ease: Back.easeInOutSine, autoAlpha: 1, display:'block'});
     });
@@ -104,6 +102,7 @@ $( document ).ready(function() {
         var btnPlay = $(".play", this)[0];
         var btnMute = $(".mute", this)[0];
         var progressBar = $(".progress-bar", this)[0];
+        var btnExpand = $(".expand", this)[0];
 
         btnPlay.addEventListener("click", function () {
             if (video.paused || video.ended) {
@@ -120,6 +119,11 @@ $( document ).ready(function() {
                 $(this).attr('title', 'play');
                 video.pause();
             }
+        });
+
+        btnExpand.addEventListener("click", function () {
+            //Set the video in full screen
+            video.webkitEnterFullscreen();
         });
 
         btnMute.addEventListener("click", function () {
