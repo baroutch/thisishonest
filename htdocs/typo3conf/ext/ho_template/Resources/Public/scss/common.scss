@@ -175,6 +175,21 @@ article.bloc_video{
         progress::-webkit-progress-value {
           background-color: #ddd;
         }
+
+        .video-time{
+          display: inline-block;
+          margin:0px 10px;
+          
+          .curtimetext, .durtimetext{
+            color:#fff;
+            text-align: center;
+            text-decoration: none;
+            font-family: $nunitoregular;
+            font-size: 13px;
+            line-height:16px;
+            display: inline-block;
+          }
+        }
       }
     }
   }
