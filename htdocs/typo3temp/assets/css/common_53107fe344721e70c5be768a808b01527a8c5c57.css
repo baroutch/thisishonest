@@ -155,3 +155,14 @@ article.bloc_video {
         margin-bottom: 5px; }
       article.bloc_video .popin-video .popin-video-content .video-controls progress::-webkit-progress-value {
         background-color: #ddd; }
+      article.bloc_video .popin-video .popin-video-content .video-controls .video-time {
+        display: inline-block;
+        margin: 0px 10px; }
+        article.bloc_video .popin-video .popin-video-content .video-controls .video-time .curtimetext, article.bloc_video .popin-video .popin-video-content .video-controls .video-time .durtimetext {
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          font-family: 'nunitoregular';
+          font-size: 13px;
+          line-height: 16px;
+          display: inline-block; }

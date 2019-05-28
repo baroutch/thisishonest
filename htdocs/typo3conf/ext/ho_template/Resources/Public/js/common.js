@@ -103,6 +103,8 @@ $( document ).ready(function() {
         var btnMute = $(".mute", this)[0];
         var progressBar = $(".progress-bar", this)[0];
         var btnExpand = $(".expand", this)[0];
+        var curtimetext = $(".curtimetext", this)[0];
+        var durtimetext = $(".durtimetext", this)[0];
 
         btnPlay.addEventListener("click", function () {
             if (video.paused || video.ended) {
@@ -119,6 +121,21 @@ $( document ).ready(function() {
                 $(this).attr('title', 'play');
                 video.pause();
             }
+        });
+
+        video.addEventListener('timeupdate', function() {
+            var nt = video.currentTime * (100 / video.duration);
+            progressBar.value = nt;
+            var curmins = Math.floor(video.currentTime / 60);
+            var cursecs = Math.floor(video.currentTime - curmins * 60);
+            var durmins = Math.floor(video.duration / 60);
+            var dursecs = Math.floor(video.duration - durmins * 60);
+            if(cursecs < 10){ cursecs = "0"+cursecs; }
+            if(dursecs < 10){ dursecs = "0"+dursecs; }
+            if(curmins < 10){ curmins = "0"+curmins; }
+            if(durmins < 10){ durmins = "0"+durmins; }
+            curtimetext.innerHTML = curmins+":"+cursecs;
+            durtimetext.innerHTML = durmins+":"+dursecs;
         });
 
         btnExpand.addEventListener("click", function () {
