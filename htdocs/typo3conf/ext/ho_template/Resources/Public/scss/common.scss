@@ -24,7 +24,7 @@ header{
         a{
           color:$secondary-text-color;
           text-decoration:none;
-          font-family:$nunitoregular;
+          font-family:$montserratregular;
           text-transform:uppercase;
         }
 
@@ -41,12 +41,12 @@ header{
     width:200px;
     left:calc(50vw - 100px);
     text-align:center;
-    margin-top:20px;
+    margin-top:35px;
 
     a{
       color:$primary-text-color;
       font-size:50px;
-      font-family:$nunitobold;
+      font-family:$montserratbold;
       text-decoration:none;
       line-height:50px;
     }
@@ -100,7 +100,7 @@ article.bloc_video{
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$nunitobold;
+      font-family:$montserratbold;
       text-transform:uppercase;
       font-size:30px;
     }
@@ -111,7 +111,7 @@ article.bloc_video{
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$nunitoregular;
+      font-family:$montserratregular;
       text-transform:uppercase;
       font-size:16px;
     }
@@ -184,7 +184,7 @@ article.bloc_video{
             color:#fff;
             text-align: center;
             text-decoration: none;
-            font-family: $nunitoregular;
+            font-family: $montserratregular;
             font-size: 13px;
             line-height:16px;
             display: inline-block;
