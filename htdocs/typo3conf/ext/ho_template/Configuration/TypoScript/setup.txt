@@ -41,7 +41,7 @@ page.5 {
     variables {
         mainLogo = TEXT
         mainLogo {
-            value = <img src="{$ho_template.resDir}/Public/img/logo_blanc.png" alt="Logo This Is Honest" />
+            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
             typolink {
                 parameter = 1
                 ATagParams = class="header__logo"
@@ -108,6 +108,9 @@ plugin.tx_wsscss.variables {
 
     nunitobold = 'nunitobold'
     nunitoregular = 'nunitoregular'
+
+    montserratbold = 'montserratbold'
+    montserratregular = 'montserratregular'
 
     fa-font-path = '../webfonts';
 }

@@ -53,8 +53,6 @@ function updateScroller() {
         }
     }
 
-    console.debug("scrollY : " + scrollY);
-
     scroller.endY = scrollY;
     scroller.y += (scrollY - scroller.y) * scroller.ease;
 
@@ -94,6 +92,10 @@ $( document ).ready(function() {
 
         $(".popin-video", this).css('z-index', 10);
         TweenLite.to(playing_video , 1 , {ease: Back.easeInOutSine, autoAlpha: 1, display:'block'});
+
+        var video = $(".media-video", this)[0];
+        //video.play();
+
     });
 
     $(".popin-video").each(function (index) {
@@ -109,18 +111,23 @@ $( document ).ready(function() {
         btnPlay.addEventListener("click", function () {
             if (video.paused || video.ended) {
                 //changeButtonType(btnPlay, 'pause');
-                $(this).removeClass('fa-play');
                 $(this).addClass('fa-pause');
+                $(this).removeClass('fa-play');
                 $(this).attr('title', 'pause');
                 video.play();
             }
             else {
                 //changeButtonType(btnPlay, 'play');
-                $(this).addClass('fa-play');
                 $(this).removeClass('fa-pause');
+                $(this).addClass('fa-play');
                 $(this).attr('title', 'play');
                 video.pause();
+                console.debug('pause');
             }
+        });
+
+        video.addEventListener('playing', function() {
+            console.debug(video.offsetTop);
         });
 
         video.addEventListener('timeupdate', function() {
