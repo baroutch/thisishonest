@@ -30,8 +30,6 @@ function onLoad() {
     $(".bloc_video").each(function () {
         bloc_video_tableau.push(this.offsetTop);
     });
-
-    console.debug(bloc_video_tableau);
 }
 
 function updateScroller() {
@@ -96,6 +94,13 @@ $( document ).ready(function() {
         var video = $(".media-video", this)[0];
         //video.play();
 
+        console.debug($(".popin-video", this).offset().top - $(window).scrollTop());
+        if($(".popin-video", this).offset().top - $(window).scrollTop() <= 1 && $(".popin-video", this).offset().top - $(window).scrollTop() >= -1){
+        }else {
+            //On calle la div
+            TweenLite.to(window, 2, {scrollTo:$(".popin-video", this).offset().top});
+        }
+
     });
 
     $(".popin-video").each(function (index) {
@@ -122,12 +127,11 @@ $( document ).ready(function() {
                 $(this).addClass('fa-play');
                 $(this).attr('title', 'play');
                 video.pause();
-                console.debug('pause');
             }
         });
 
         video.addEventListener('playing', function() {
-            console.debug(video.offsetTop);
+
         });
 
         video.addEventListener('timeupdate', function() {
@@ -143,6 +147,11 @@ $( document ).ready(function() {
             if(durmins < 10){ durmins = "0"+durmins; }
             curtimetext.innerHTML = curmins+":"+cursecs;
             durtimetext.innerHTML = durmins+":"+dursecs;
+            console.debug($(this).offset().top);
+            // a terminer
+            //if($(this).offset().top >= 1 && $(this).offset().top <= -1){
+                //video.pause();
+            //}
         });
 
         btnExpand.addEventListener("click", function () {
