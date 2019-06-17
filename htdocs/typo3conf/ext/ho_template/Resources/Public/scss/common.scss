@@ -194,3 +194,97 @@ article.bloc_video{
     }
   }
 }
+
+.tx-powermail{
+  margin: 100px 0px;
+
+  form{
+    width:1200px;
+    margin:0px auto;
+
+    h3{
+      display:none;
+    }
+
+    fieldset{
+      overflow:hidden;
+
+      legend{
+        text-align:center;
+        font-family:$montserratregular;
+        font-size:24px;
+        margin-top:50px;
+      }
+
+      label{
+        font-family:$montserratbold;
+        font-size:14px;
+        margin:10px 0px;
+      }
+
+      .powermail_fieldwrap_type_input{
+        width:48%;
+        float:left;
+        margin:1%;
+
+        input{
+          width:100%;
+          border:0px;
+          border-bottom:1px solid #000;
+          font-family:$montserratregular;
+          font-size:14px;
+          font-style:italic;
+          padding:3px 0px;
+        }
+      }
+    }
+
+    .powermail_fieldwrap_type_textarea{
+      width:98%;
+      margin:1%;
+
+      textarea{
+        width:100%;
+        border:0px;
+        border-bottom:1px solid #000;
+        font-family:$montserratregular;
+        font-size:14px;
+        font-style:italic;
+        padding:3px 0px;
+      }
+    }
+  }
+}
+
+footer{
+  background:#000;
+  font-size:14px;
+  font-family:$montserratbold;
+  text-align:center;
+  color:#fff;
+  padding:70px 0px 20px 0px;
+
+  .footer-top{
+
+  }
+
+  .footer-middle{
+    margin:50px 0px;
+
+    ul{
+      li{
+        display:inline-block;
+
+        i{
+          width:30px;
+          height:30px;
+          color:#fff;
+        }
+      }
+    }
+  }
+
+  .footer-bottom{
+
+  }
+}

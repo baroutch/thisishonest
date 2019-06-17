@@ -88,6 +88,15 @@ page.10 {
     variables{
         home-center < styles.content.get
         home-center.select.where = colPos = 1
+
+        mainLogo = TEXT
+        mainLogo {
+            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
+            typolink {
+                parameter = 1
+                ATagParams = class="header__logo"
+            }
+        }
     }
 
     file.stdWrap.cObject = CASE
@@ -99,6 +108,13 @@ page.10 {
         1.value = {$ho_template.resDir}/Private/Templates/home.html
     }
 }
+
+# page.15 = FLUIDTEMPLATE
+# page.15 {
+
+# file = {$ho_template.resDir}/Private/Templates/Transverse/footer.html
+
+# }
 
 plugin.tx_wsscss.variables {
     primary-text-color = #da0c16
@@ -141,3 +157,23 @@ tt_content.gridelements_pi1.20.10.setup {
 }
 # ************************************************************************************
 
+# ***************************** SURCHARGE DES TEMPLATES POWERMAIL ************************************
+plugin.tx_powermail {
+    view {
+        templateRootPaths >
+        templateRootPaths {
+            0 = EXT:powermail/Resources/Private/Templates/
+            1 = fileadmin/templates/powermail/Resources/Private/Templates
+        }
+        partialRootPaths >
+        partialRootPaths {
+            0 = EXT:powermail/Resources/Private/Partials/
+            1 = fileadmin/templates/powermail/Resources/Private/Partials
+        }
+        layoutRootPaths >
+        layoutRootPaths {
+            0 = EXT:powermail/Resources/Private/Layouts/
+            1 = fileadmin/templates/powermail/Resources/Private/Layouts
+        }
+    }
+}
