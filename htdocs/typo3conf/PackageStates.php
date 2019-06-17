@@ -110,6 +110,9 @@ return [
         'phpmyadmin' => [
             'packagePath' => 'typo3conf/ext/phpmyadmin/',
         ],
+        'powermail' => [
+            'packagePath' => 'typo3conf/ext/powermail/',
+        ],
         'ws_scss' => [
             'packagePath' => 'typo3conf/ext/ws_scss/',
         ],
