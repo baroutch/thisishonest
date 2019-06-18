@@ -30,6 +30,8 @@ page {
         common = {$ho_template.resDir}/Public/js/common.js
     }
 
+    shortcutIcon = fileadmin/files/favicon.ico
+
 }
 
 # header
