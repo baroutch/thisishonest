@@ -237,6 +237,20 @@ article.bloc_video{
           padding:3px 0px;
         }
       }
+
+      .powermail_fieldwrap_type_submit{
+        text-align:right;
+
+        input{
+          border:0px;
+          border-bottom:1px solid #000;
+          font-family:$montserratbold;
+          font-size:14px;
+          padding:10px 20px;
+          background:none;
+        }
+
+      }
     }
 
     .powermail_fieldwrap_type_textarea{
@@ -286,5 +300,24 @@ footer{
 
   .footer-bottom{
 
+  }
+}
+
+.tab-video{
+  position:relative;
+  .title{
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: $montserratbold;
+    text-transform: uppercase;
+    font-size: 30px;
+    height:100px;
+    position:absolute;
+    top:calc(50% - 50px);
+    width:100%;
+    cursor:pointer;
+    z-index: 100;
   }
 }
