@@ -166,3 +166,86 @@ article.bloc_video {
           font-size: 13px;
           line-height: 16px;
           display: inline-block; }
+
+.tx-powermail {
+  margin: 100px 0px; }
+  .tx-powermail form {
+    width: 1200px;
+    margin: 0px auto; }
+    .tx-powermail form h3 {
+      display: none; }
+    .tx-powermail form fieldset {
+      overflow: hidden; }
+      .tx-powermail form fieldset legend {
+        text-align: center;
+        font-family: 'montserratregular';
+        font-size: 24px;
+        margin-top: 50px; }
+      .tx-powermail form fieldset label {
+        font-family: 'montserratbold';
+        font-size: 14px;
+        margin: 10px 0px; }
+      .tx-powermail form fieldset .powermail_fieldwrap_type_input {
+        width: 48%;
+        float: left;
+        margin: 1%; }
+      .tx-powermail form fieldset .powermail_fieldwrap_type_input input {
+        width: 100%;
+        border: 0px;
+        border-bottom: 1px solid #000;
+        font-family: 'montserratregular';
+        font-size: 14px;
+        font-style: italic;
+        padding: 3px 0px; }
+      .tx-powermail form fieldset .powermail_fieldwrap_type_submit {
+        text-align: right; }
+      .tx-powermail form fieldset .powermail_fieldwrap_type_submit input {
+        border: 0px;
+        border-bottom: 1px solid #000;
+        font-family: 'montserratbold';
+        font-size: 14px;
+        padding: 10px 20px;
+        background: none; }
+    .tx-powermail form .powermail_fieldwrap_type_textarea {
+      width: 98%;
+      margin: 1%; }
+      .tx-powermail form .powermail_fieldwrap_type_textarea textarea {
+        width: 100%;
+        border: 0px;
+        border-bottom: 1px solid #000;
+        font-family: 'montserratregular';
+        font-size: 14px;
+        font-style: italic;
+        padding: 3px 0px; }
+
+footer {
+  background: #000;
+  font-size: 14px;
+  font-family: 'montserratbold';
+  text-align: center;
+  color: #fff;
+  padding: 70px 0px 20px 0px; }
+  footer .footer-middle {
+    margin: 50px 0px; }
+    footer .footer-middle ul li {
+      display: inline-block; }
+      footer .footer-middle ul li i {
+        width: 30px;
+        height: 30px;
+        color: #fff; }
+  .tab-video {
+    position: relative; }
+  .tab-video .title {
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'montserratbold';
+    text-transform: uppercase;
+    font-size: 30px;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 50px);
+    width: 100%;
+    cursor: pointer;
+    z-index: 100; }

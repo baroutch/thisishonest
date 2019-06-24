@@ -88,13 +88,16 @@ $( document ).ready(function() {
 
         var playing_video = $(".popin-video", this)[0];
 
+        //On affiche la popin de la video
         $(".popin-video", this).css('z-index', 10);
         TweenLite.to(playing_video , 1 , {ease: Back.easeInOutSine, autoAlpha: 1, display:'block'});
 
         var video = $(".media-video", this)[0];
-        //video.play();
+        video.play();
 
-        console.debug($(".popin-video", this).offset().top - $(window).scrollTop());
+        //console.debug($(".popin-video", this).offset().top - $(window).scrollTop());
+
+        //Si la div est mal callée
         if($(".popin-video", this).offset().top - $(window).scrollTop() <= 1 && $(".popin-video", this).offset().top - $(window).scrollTop() >= -1){
         }else {
             //On calle la div
@@ -130,10 +133,6 @@ $( document ).ready(function() {
             }
         });
 
-        video.addEventListener('playing', function() {
-
-        });
-
         video.addEventListener('timeupdate', function() {
             var nt = video.currentTime * (100 / video.duration);
             progressBar.value = nt;
@@ -147,11 +146,17 @@ $( document ).ready(function() {
             if(durmins < 10){ durmins = "0"+durmins; }
             curtimetext.innerHTML = curmins+":"+cursecs;
             durtimetext.innerHTML = durmins+":"+dursecs;
-            console.debug($(this).offset().top);
-            // a terminer
-            //if($(this).offset().top >= 1 && $(this).offset().top <= -1){
-                //video.pause();
-            //}
+            //console.debug($(this).parent().offset().top - $(window).scrollTop());
+            // On regarde si la vidéo est plus loin que la moitié de l'écran
+            if(($(this).parent().offset().top - $(window).scrollTop()) >= (screen.height / 2) || ($(this).parent().offset().top - $(window).scrollTop()) <= (screen.height / 2) * (-1)){
+                //console.debug('pause');
+                //On met la video en pause
+                video.pause();
+            }
+        });
+
+        video.addEventListener("pause", function(){
+           console.debug('pause');
         });
 
         btnExpand.addEventListener("click", function () {
