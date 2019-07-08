@@ -43,7 +43,7 @@ page.5 {
     variables {
         mainLogo = TEXT
         mainLogo {
-            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
+            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" width="200px" />
             typolink {
                 parameter = 1
                 ATagParams = class="header__logo"
@@ -91,9 +91,9 @@ page.10 {
         home-center < styles.content.get
         home-center.select.where = colPos = 1
 
-        mainLogo = TEXT
-        mainLogo {
-            value = <img src="{$ho_template.resDir}/Public/img/logo.png" alt="Logo This Is Honest" />
+        footerLogo = TEXT
+        footerLogo {
+            value = <img src="{$ho_template.resDir}/Public/img/logo_bottom.png" alt="Logo This Is Honest" width="175px" />
             typolink {
                 parameter = 1
                 ATagParams = class="header__logo"
