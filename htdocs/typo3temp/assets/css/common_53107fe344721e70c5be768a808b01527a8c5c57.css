@@ -228,13 +228,18 @@ footer {
   footer .footer-middle {
     margin: 50px 0px; }
     footer .footer-middle ul li {
-      display: inline-block; }
+      display: inline-block;
+      margin: 0px 10px; }
       footer .footer-middle ul li i {
         width: 30px;
         height: 30px;
         color: #fff; }
-  .tab-video {
-    position: relative; }
+  footer .footer-bottom {
+    font-family: 'montserratregular';
+    font-size: 12px; }
+
+.tab-video {
+  position: relative; }
   .tab-video .bloc-video-content {
     height: 100px;
     position: absolute;

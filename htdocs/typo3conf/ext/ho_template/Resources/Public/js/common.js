@@ -106,10 +106,10 @@ $( document ).ready(function() {
 
     });
 
-    $(".popin-video").each(function (index) {
+    $(".popin-video").each(function () {
 
         var video = $(".media-video", this)[0];
-        var btnPlay = $(".play", this)[0];
+        var btnPlay = $(".video-play", this)[0];
         var btnMute = $(".mute", this)[0];
         var progressBar = $(".progress-bar", this)[0];
         var btnExpand = $(".expand", this)[0];
@@ -118,18 +118,18 @@ $( document ).ready(function() {
 
         btnPlay.addEventListener("click", function () {
             if (video.paused || video.ended) {
-                //changeButtonType(btnPlay, 'pause');
+                video.pause();
+                console.debug('play');
                 $(this).addClass('fa-pause');
                 $(this).removeClass('fa-play');
                 $(this).attr('title', 'pause');
-                video.play();
             }
             else {
-                //changeButtonType(btnPlay, 'play');
+                video.play();
+                console.debug('pause');
                 $(this).removeClass('fa-pause');
                 $(this).addClass('fa-play');
                 $(this).attr('title', 'play');
-                video.pause();
             }
         });
 
@@ -153,10 +153,6 @@ $( document ).ready(function() {
                 //On met la video en pause
                 video.pause();
             }
-        });
-
-        video.addEventListener("pause", function(){
-           console.debug('pause');
         });
 
         btnExpand.addEventListener("click", function () {
@@ -206,70 +202,70 @@ $( document ).ready(function() {
 /*|===================================|*/
 
 /*
-console.debug('Class history.js');
-var History = window.History;
-var rootUrl = History.getRootUrl();
-var stateChangeVerrou = false;
-var JC = {
+ console.debug('Class history.js');
+ var History = window.History;
+ var rootUrl = History.getRootUrl();
+ var stateChangeVerrou = false;
+ var JC = {
 
-    init: function(){
-        console.debug('Initialisation ajax');
-        JC.initLink();
-        JC.stateChange();
-    },
+ init: function(){
+ console.debug('Initialisation ajax');
+ JC.initLink();
+ JC.stateChange();
+ },
 
-    initLink: function(){
+ initLink: function(){
 
-        console.debug('Fonction initLink');
+ console.debug('Fonction initLink');
 
-        $('body').find('a').click(function(event){
+ $('body').find('a').click(function(event){
 
-            stateChangeVerrou = true;
-            var
-                url = $(this).attr('href'),
-                title = $(this).attr('title')||null;
+ stateChangeVerrou = true;
+ var
+ url = $(this).attr('href'),
+ title = $(this).attr('title')||null;
 
-            if($(this).attr('target') == '_blank') return true;
+ if($(this).attr('target') == '_blank') return true;
 
-            if ( event.which == 2 || event.metaKey ) { return true; }
-            History.pushState(null,title,url);
-            event.preventDefault();
-            return false;
-        });
-    },
+ if ( event.which == 2 || event.metaKey ) { return true; }
+ History.pushState(null,title,url);
+ event.preventDefault();
+ return false;
+ });
+ },
 
-    loadUrl: function(url){
-        console.debug('loadUrl');
-        //JC.loadingStart();
-        $.ajax({
-            url: url,
-            cache: true,
-            success: function(response){
-                JC.$contentToLoad = $(response).find('#scrollcontainer');
-                console.debug($(response).find('#scrollcontainer'));
-                JC.removePage();
-                JC.loadingStop();
-            }
-        });
-    },
+ loadUrl: function(url){
+ console.debug('loadUrl');
+ //JC.loadingStart();
+ $.ajax({
+ url: url,
+ cache: true,
+ success: function(response){
+ JC.$contentToLoad = $(response).find('#scrollcontainer');
+ console.debug($(response).find('#scrollcontainer'));
+ JC.removePage();
+ JC.loadingStop();
+ }
+ });
+ },
 
-    stateChange: function(){
-        $(window).bind('statechange',function(){
-            if(stateChangeVerrou){
-                var State = History.getState();
-                JC.loadUrl( State.url);
-            }
-        });
-    },
-}
-
-
+ stateChange: function(){
+ $(window).bind('statechange',function(){
+ if(stateChangeVerrou){
+ var State = History.getState();
+ JC.loadUrl( State.url);
+ }
+ });
+ },
+ }
 
 
-$(document).ready(function() {
 
-    $(document).ready(JC.init);
 
-});
+ $(document).ready(function() {
 
-*/
+ $(document).ready(JC.init);
+
+ });
+
+ */
