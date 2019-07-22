@@ -80,7 +80,7 @@ function onResize() {
     }
 }
 
-$( document ).ready(function() {
+jQuery( document ).ready(function() {
 
     var link = $("article.bloc_video");
 
@@ -106,30 +106,30 @@ $( document ).ready(function() {
 
     });
 
-    $(".popin-video").each(function () {
+    jQuery(".popin-video").each(function () {
 
-        var video = $(".media-video", this)[0];
-        var btnPlay = $(".video-play", this)[0];
-        var btnMute = $(".mute", this)[0];
-        var progressBar = $(".progress-bar", this)[0];
-        var btnExpand = $(".expand", this)[0];
-        var curtimetext = $(".curtimetext", this)[0];
-        var durtimetext = $(".durtimetext", this)[0];
+        var video = jQuery(".media-video", this)[0];
+        var btnPlay = jQuery(".play", this)[0];
+        var btnMute = jQuery(".mute", this)[0];
+        var progressBar = jQuery(".progress-bar", this)[0];
+        var btnExpand = jQuery(".expand", this)[0];
+        var curtimetext = jQuery(".curtimetext", this)[0];
+        var durtimetext = jQuery(".durtimetext", this)[0];
 
         btnPlay.addEventListener("click", function () {
-            if (video.paused || video.ended) {
+            if (video.paused == false) {
+                console.debug(video);
                 video.pause();
-                console.debug('play');
-                $(this).addClass('fa-pause');
-                $(this).removeClass('fa-play');
-                $(this).attr('title', 'pause');
-            }
-            else {
-                video.play();
                 console.debug('pause');
                 $(this).removeClass('fa-pause');
                 $(this).addClass('fa-play');
                 $(this).attr('title', 'play');
+            }else{
+                video.play();
+                console.debug('play');
+                $(this).addClass('fa-pause');
+                $(this).removeClass('fa-play');
+                $(this).attr('title', 'pause');
             }
         });
 
