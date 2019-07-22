@@ -128,7 +128,8 @@ article.bloc_video {
         vertical-align: middle;
         max-width: 100%;
         max-height: 100%;
-        width: auto; }
+        width: auto;
+        outline: 0; }
       article.bloc_video .popin-video .popin-video-content .video-controls {
         position: absolute;
         height: 50px;
@@ -138,7 +139,8 @@ article.bloc_video {
         z-index: 10;
         text-align: right;
         line-height: 20px;
-        padding-right: 50px; }
+        padding-right: 50px;
+        display: none; }
       article.bloc_video .popin-video .popin-video-content .video-controls button {
         background: none;
         border: 0px;
@@ -165,12 +167,15 @@ article.bloc_video {
           font-family: 'montserratregular';
           font-size: 13px;
           line-height: 16px;
-          display: inline-block; }
+          display: inline-block;
+          width: 45px; }
 
 .tx-powermail {
-  margin: 100px 0px; }
+  margin: 0px;
+  height: 60vh;
+  padding-top: calc((60vh - 260px) /2); }
   .tx-powermail form {
-    width: 1200px;
+    width: 800px;
     margin: 0px auto; }
     .tx-powermail form h3 {
       display: none; }
@@ -180,9 +185,9 @@ article.bloc_video {
         text-align: center;
         font-family: 'montserratregular';
         font-size: 24px;
-        margin-top: 50px; }
+        margin-bottom: 40px; }
       .tx-powermail form fieldset label {
-        font-family: 'montserratbold';
+        font-family: 'montserratregular';
         font-size: 14px;
         margin: 10px 0px; }
       .tx-powermail form fieldset .powermail_fieldwrap_type_input {
@@ -192,27 +197,30 @@ article.bloc_video {
       .tx-powermail form fieldset .powermail_fieldwrap_type_input input {
         width: 100%;
         border: 0px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #bbb;
         font-family: 'montserratregular';
         font-size: 14px;
         font-style: italic;
         padding: 3px 0px; }
       .tx-powermail form fieldset .powermail_fieldwrap_type_submit {
-        text-align: right; }
+        text-align: right;
+        padding-top: 20px; }
       .tx-powermail form fieldset .powermail_fieldwrap_type_submit input {
         border: 0px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #bbb;
         font-family: 'montserratbold';
         font-size: 14px;
         padding: 10px 20px;
         background: none; }
     .tx-powermail form .powermail_fieldwrap_type_textarea {
       width: 98%;
-      margin: 1%; }
+      margin: 1%;
+      padding-top: 20px;
+      overflow: hidden; }
       .tx-powermail form .powermail_fieldwrap_type_textarea textarea {
         width: 100%;
         border: 0px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid #bbb;
         font-family: 'montserratregular';
         font-size: 14px;
         font-style: italic;
@@ -224,7 +232,9 @@ footer {
   font-family: 'montserratbold';
   text-align: center;
   color: #fff;
-  padding: 70px 0px 20px 0px; }
+  padding: 0px;
+  height: 40vh;
+  padding-top: calc((40vh - 215px) /2); }
   footer .footer-middle {
     margin: 50px 0px; }
     footer .footer-middle ul li {
