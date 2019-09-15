@@ -30,6 +30,12 @@ page {
         common = {$ho_template.resDir}/Public/js/common.js
     }
 
+    meta {
+        title.field = title
+        keywords.field = keywords
+        description.field = description
+    }
+
     shortcutIcon = fileadmin/files/favicon.ico
 
     headerData.124034 = TEXT

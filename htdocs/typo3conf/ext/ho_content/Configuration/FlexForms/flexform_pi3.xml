@@ -1,0 +1,48 @@
+<T3DataStructure>
+    <meta>
+        <langDisable>1</langDisable>
+    </meta>
+    <sheets>
+        <config>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Bloc text</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <rteName>
+                        <TCEforms>
+                            <label>Text du bloc</label>
+                            <config>
+                                <type>text</type>
+                                <cols>30</cols>
+                                <rows>5</rows>
+                            </config>
+                            <defaultExtras>richtext[*]:rte_transform[mode=ts_css]</defaultExtras>
+                        </TCEforms>
+                    </rteName>
+                    <text_color>
+                        <TCEforms>
+                            <label>Couleur du texte</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </text_color>
+                    <bg_color>
+                        <TCEforms>
+                            <label>Couleur du fond</label>
+                            <config>
+                                <type>input</type>
+                                <size>30</size>
+                            </config>
+                        </TCEforms>
+                    </bg_color>
+
+                </el>
+            </ROOT>
+        </config>
+
+    </sheets>
+</T3DataStructure>
