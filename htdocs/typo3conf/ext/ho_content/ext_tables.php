@@ -17,6 +17,18 @@ call_user_func(
             'Bloc Image'
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Honest.HoContent',
+            'Pi3',
+            'Bloc Text'
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'Honest.HoContent',
+            'Pi4',
+            'Bloc Citation'
+        );
+
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('ho_content', 'Configuration/TypoScript', 'Plugin Content');
 
     }
@@ -42,6 +54,26 @@ $iconRegistry->registerIcon(
     ['source' => 'EXT:ho_content/Resources/Public/Icons/image.svg']
 );
 
+/**
+ * Register icons
+ */
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'extension-honest-content-bloctext',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:ho_content/Resources/Public/Icons/text.svg']
+);
+
+/**
+ * Register icons
+ */
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+$iconRegistry->registerIcon(
+    'extension-honest-content-bloccitation',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:ho_content/Resources/Public/Icons/citation.svg']
+);
+
 // Pi1 Flexform
 $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
 $pluginSignature = strtolower($extensionName) . '_pi1';
@@ -53,6 +85,18 @@ $extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamel
 $pluginSignature = strtolower($extensionName) . '_pi2';
 $TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/flexform_pi2.xml');
+
+// Pi3 Flexform
+$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+$pluginSignature = strtolower($extensionName) . '_pi3';
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/flexform_pi3.xml');
+
+// Pi4 Flexform
+$extensionName = \TYPO3\CMS\Core\Utility\GeneralUtility::underscoredToUpperCamelCase($_EXTKEY);
+$pluginSignature = strtolower($extensionName) . '_pi4';
+$TCA['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:'.$_EXTKEY.'/Configuration/FlexForms/flexform_pi4.xml');
 
 // ON CREE LE DOSSIER Correspondant AUX IMAGES
 if(!is_dir(__DIR__."/../../../uploads/tx_hocontent")){	@mkdir(__DIR__."/../../../uploads/tx_hocontent", 0775); }

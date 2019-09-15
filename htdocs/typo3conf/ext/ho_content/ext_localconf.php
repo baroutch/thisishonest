@@ -33,6 +33,34 @@ call_user_func(
             )
         );
 
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Honest.HoContent',
+            'Pi3',
+            array(
+                'Content' => 'blocText',
+
+            ),
+            // non-cacheable actions
+            array(
+                'Content' => 'blocText',
+
+            )
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Honest.HoContent',
+            'Pi4',
+            array(
+                'Content' => 'blocCitation',
+
+            ),
+            // non-cacheable actions
+            array(
+                'Content' => 'blocCitation',
+
+            )
+        );
+
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
             'mod {
@@ -65,6 +93,46 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = hocontent_pi2
+                            }
+                        }
+                    }
+                    show = *
+                }
+           }'
+        );
+
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        pi3 {
+                            iconIdentifier = extension-honest-content-bloctext
+                            title = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi3
+                            description = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi3.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hocontent_pi3
+                            }
+                        }
+                    }
+                    show = *
+                }
+           }'
+        );
+
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
+                wizards.newContentElement.wizardItems.plugins {
+                    elements {
+                        pi4 {
+                            iconIdentifier = extension-honest-content-bloccitation
+                            title = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi4
+                            description = LLL:EXT:ho_content/Resources/Private/Language/locallang_db.xlf:tx_ho_content_domain_model_pi4.description
+                            tt_content_defValues {
+                                CType = list
+                                list_type = hocontent_pi4
                             }
                         }
                     }

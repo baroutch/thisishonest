@@ -81,6 +81,28 @@ section.viewport{
   }
 }
 
+article.bloc_text {
+   position: relative;
+   background-size: cover;
+   background-position: center;
+   width: 100%;
+  padding:200px 0px;
+
+  .titre_bloc_video{
+    line-height: 30px;
+    text-align: justify;
+    width: 100%;
+    text-decoration: none;
+    font-family: 'montserratregular';
+    text-transform: uppercase;
+    font-size: 20px;
+
+    strong{
+      font-family: 'montserratbold';
+    }
+  }
+ }
+
 article.bloc_video{
   position:relative;
   background-size:cover;

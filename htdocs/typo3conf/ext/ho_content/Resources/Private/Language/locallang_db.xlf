@@ -15,6 +15,18 @@
             <trans-unit id="tx_ho_content_domain_model_pi2.description">
                 <source>Plugin qui gère l'affichage des blocs image de la home</source>
             </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi3">
+                <source>Bloc text</source>
+            </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi3.description">
+                <source>Plugin qui gère l'affichage des blocs text</source>
+            </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi4">
+                <source>Bloc Citation</source>
+            </trans-unit>
+            <trans-unit id="tx_ho_content_domain_model_pi4.description">
+                <source>Plugin qui gère l'affichage des blocs citation</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
