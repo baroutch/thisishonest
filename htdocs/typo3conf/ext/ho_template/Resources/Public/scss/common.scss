@@ -9,7 +9,7 @@ header{
   nav{
     position:absolute;
     left:50px;
-    top:35px;
+    top:45px;
     height:50px;
 
     ul{
@@ -22,14 +22,14 @@ header{
         font-size:18px;
 
         a{
-          color:$secondary-text-color;
+          color:#000;
           text-decoration:none;
-          font-family:$montserratregular;
+          font-family: 'linotte-lightuploaded_file';
           text-transform:uppercase;
         }
 
         a:hover{
-          color:$secondary-text-color-hover;
+          color:red;
           text-decoration:none;
         }
       }
@@ -41,7 +41,7 @@ header{
     width:200px;
     left:calc(50vw - 100px);
     text-align:center;
-    margin-top:35px;
+    margin-top:50px;
 
     a{
       color:$primary-text-color;
@@ -51,6 +51,10 @@ header{
       line-height:50px;
     }
   }
+}
+
+.home header nav ul li a{
+  color:#fff;
 }
 
 *, :after, :before {
@@ -93,15 +97,25 @@ article.bloc_text {
     text-align: justify;
     width: 100%;
     text-decoration: none;
-    font-family: 'montserratregular';
+    font-family: 'linotte-lightuploaded_file';
     text-transform: uppercase;
     font-size: 20px;
 
+    a{
+      color:#000;
+    }
+
     strong{
-      font-family: 'montserratbold';
+      font-family: 'linotte-regularuploaded_file';
     }
   }
  }
+
+article.bloc_video.citation .bloc-video-content .titre_bloc_video{
+  font-family: 'linotte-bolduploaded_file';
+  font-size:60px;
+  line-height: 70px;
+}
 
 article.bloc_video{
   position:relative;
@@ -117,14 +131,14 @@ article.bloc_video{
     cursor:pointer;
 
     .titre_bloc_video{
-      line-height:50px;
+      line-height:100px;
       text-align:center;
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$montserratbold;
+      font-family: 'linotte-lightuploaded_file';
       text-transform:uppercase;
-      font-size:30px;
+      font-size:70px;
     }
 
     .sstitre_bloc_video{
@@ -133,9 +147,10 @@ article.bloc_video{
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$montserratregular;
+      font-family: 'linotte-bolduploaded_file';
       text-transform:uppercase;
-      font-size:16px;
+      font-size:17px;
+      letter-spacing: 3px;
     }
 
   }
@@ -238,13 +253,13 @@ article.bloc_video{
 
       legend{
         text-align:center;
-        font-family:$montserratregular;
+        font-family: 'linotte-lightuploaded_file';
         font-size:24px;
         margin-bottom:40px;
       }
 
       label{
-        font-family:$montserratregular;
+        font-family: 'linotte-lightuploaded_file';
         font-size:14px;
         margin:10px 0px;
       }
@@ -258,7 +273,7 @@ article.bloc_video{
           width:100%;
           border:0px;
           border-bottom:1px solid #bbb;
-          font-family:$montserratregular;
+          font-family: 'linotte-lightuploaded_file';
           font-size:14px;
           font-style:italic;
           padding:3px 0px;
@@ -272,7 +287,7 @@ article.bloc_video{
         input{
           border:0px;
           border-bottom:1px solid #bbb;
-          font-family:$montserratbold;
+          font-family: 'linotte-lightuploaded_file';
           font-size:14px;
           padding:10px 20px;
           background:none;
@@ -291,7 +306,7 @@ article.bloc_video{
         width:100%;
         border:0px;
         border-bottom:1px solid #bbb;
-        font-family:$montserratregular;
+        font-family: 'linotte-lightuploaded_file';
         font-size:14px;
         font-style:italic;
         padding:3px 0px;
@@ -307,7 +322,7 @@ footer{
   text-align:center;
   color:#fff;
   padding:0px;
-  height:40vh;
+  height:33vh;
   padding-top:calc((40vh - 215px) /2);
 
   .footer-top{
@@ -349,14 +364,14 @@ footer{
     z-index:100;
 
     .titre_bloc_video{
-      line-height:50px;
+      line-height:100px;
       text-align:center;
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$montserratbold;
+      font-family: 'linotte-lightuploaded_file';
       text-transform:uppercase;
-      font-size:30px;
+      font-size:70px;
     }
 
     .sstitre_bloc_video{
@@ -365,9 +380,9 @@ footer{
       width:100%;
       color:$secondary-text-color;
       text-decoration:none;
-      font-family:$montserratregular;
+      font-family: 'linotte-bolduploaded_file';
       text-transform:uppercase;
-      font-size:16px;
+      font-size:17px;
     }
 
   }
